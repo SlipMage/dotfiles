@@ -1,6 +1,8 @@
 All credit for this method goes to [jaagr](https://github.com/jaagr/dots/blob/master/README.md).  
 Documentation modified by [ecly](https://github.com/ecly/dotfiles/blob/master/.config/DOT_MANAGEMENT.md).
 
+This simple yet effective technique lets you track the files you care about and it doesn't require any tools other than git. The files will be kept at their intended location, without the need to create symlinks or copies.
+
 #### Management
 ---------------------------------
 Files are added to the repository by calling `dot add $HOME/.config/file` and when
