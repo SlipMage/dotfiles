@@ -1,5 +1,6 @@
 All credit for this method goes to [jaagr](https://github.com/jaagr/dots/blob/master/README.md).  
 Documentation modified by [ecly](https://github.com/ecly/dotfiles/blob/master/.config/DOT_MANAGEMENT.md).
+
 Minor corrections by [SlipMage](https://github.com/SlipMage/dotfiles/blob/master/README.md).
 
 This simple yet effective technique lets you track the files you care about and it doesn't require any tools other than git. The files will be kept at their intended location, without the need to create symlinks or copies.
