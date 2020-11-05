@@ -29,6 +29,7 @@ dot config alias.untracked "status -u ."
 dot config alias.untracked-at "status -u"
 ~~~
 
+#### Usage
 ~~~ sh
 # Use the dot alias like you would use the git command
 dot status
