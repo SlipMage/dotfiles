@@ -1,5 +1,5 @@
 All credit for this method goes to [jaagr](https://github.com/jaagr/dots/blob/master/README.md).  
-Modified by [ecly](https://github.com/ecly/dotfiles/blob/master/.config/DOT_MANAGEMENT.md).
+Documentation modified by [ecly](https://github.com/ecly/dotfiles/blob/master/.config/DOT_MANAGEMENT.md).
 
 #### Management
 ---------------------------------
