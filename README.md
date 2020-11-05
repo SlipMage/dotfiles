@@ -46,8 +46,8 @@ dots untracked
 dots status -u .config/
 
 # Listing files (tracked by git)
-dot ls-files
-dot ls-files .config/polybar/
+dots ls-files
+dots ls-files .config/polybar/
 ~~~
 
 #### Replication
