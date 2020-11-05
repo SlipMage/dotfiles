@@ -30,9 +30,9 @@ bashcompinit
 eval "$(register-python-argcomplete pipx)"
 
 typeset -g MY_ZINIT_PATH=${ZDOTDIR:-$HOME/.config/zsh}/zinit
-#if [ ! -f "$MY_ZINIT_PATH/bin/zinit.sh" ]; then
+#if [ ! -f $MY_ZINIT_PATH/bin/zinit.sh ]; then
 #	mkdir -p $MY_ZINIT_PATH && chmod g-rwx "$MY_ZINIT_PATH" && \
-#	git clone --depth=1 https://github.com/zdharma/zinit $ZINIT_PATH/bin
+#	git clone --depth=1 https://github.com/zdharma/zinit $MY_ZINIT_PATH/bin
 #fi
 
 if [ -f $MY_ZINIT_PATH/bin/zinit.zsh ]; then
