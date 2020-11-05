@@ -7,43 +7,43 @@ This simple yet effective technique lets you track the files you care about and 
 
 #### Management
 ---------------------------------
-Files are added to the repository by calling `dot add $HOME/.config/file` and when
+Files are added to the repository by calling `dots add $HOME/.config/file` and when
 issuing `git status` - only changes to files explicitly added will be shown.
 
-To get a list of files not tracked by git, use `dot untracked` or `dot untracked-at $HOME/path/to/foo/bar`
+To get a list of files not tracked by git, use `dot untracked` or `dots untracked-at $HOME/path/to/foo/bar`
 to only show files in a specific subdirectory.
 
 #### Alias
 ~~~ sh
-alias dot='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
+alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
 ~~~
 
 #### Setup
 ~~~ sh
 git init --bare $HOME/.dots.git
-dot remote add origin https://github.com/ecly/dotfiles.git
+dots remote add origin https://github.com/ecly/dotfiles.git
 ~~~
 
 #### Configuration
 ~~~ sh
-dot config status.showUntrackedFiles no
+dots config status.showUntrackedFiles no
 
 # Useful aliases
-dot config alias.untracked "status -u ."
-dot config alias.untracked-at "status -u"
+dots config alias.untracked "status -u ."
+dots config alias.untracked-at "status -u"
 ~~~
 
 #### Usage
 ~~~ sh
 # Use the dot alias like you would use the git command
-dot status
-dot add --update ...
-dot commit -m "..."
-dot push
+dots status
+dots add --update ...
+dots commit -m "..."
+dots push
 
 # Listing files (not tracked by git)
-dot untracked
-dot status -u .config/
+dots untracked
+dots status -u .config/
 
 # Listing files (tracked by git)
 dot ls-files
@@ -55,7 +55,7 @@ dot ls-files .config/polybar/
 git clone --recursive --separate-git-dir=$HOME/.dots.git https://github.com/ecly/dotfiles.git /tmp/dots
 rsync -rvl --exclude ".git" /tmp/dots/ $HOME/
 rm -r /tmp/dots
-dot submodule update --init --recursive $HOME/
+dots submodule update --init --recursive $HOME/
 ~~~
 
 #### Extra
