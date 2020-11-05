@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Command sane defaults
+alias \
+	cp="cp -i" \
+	rm="rm -I" \
+	mkdir="mkdir -p" \
+# Colorize commands
+alias \
+	ls="ls --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+
+# trim the fat
+alias \
+	dots="git --git-dir=$HOME/.dots.git/ --work-tree=$HOME" \
