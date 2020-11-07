@@ -21,7 +21,7 @@ alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
 #### Setup
 ~~~ sh
 git init --bare $HOME/.dots.git
-dots remote add origin https://github.com/ecly/dotfiles.git
+dots remote add origin git@github.com:SlipMage/dotfiles.git
 ~~~
 
 #### Configuration
