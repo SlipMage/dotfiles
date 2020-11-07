@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
+export PATH="$PATH/snap/bin:$HOME/.local/bin/" 
 
 export HDG_CONFIG_HOME="$HOME/.config"
 export HDG_DATA_HOME="$HOME/.local/share"
