@@ -28,7 +28,7 @@ autoload -Uz bashcompinit
 bashcompinit
 
 eval "$(register-python-argcomplete pipx)"
-
+(cat ~/.cache/wal/sequences &)
 typeset -g MY_ZINIT_PATH=${ZDOTDIR:-$HOME/.config/zsh}/zinit
 #if [ ! -f $MY_ZINIT_PATH/bin/zinit.sh ]; then
 #	mkdir -p $MY_ZINIT_PATH && chmod g-rwx "$MY_ZINIT_PATH" && \

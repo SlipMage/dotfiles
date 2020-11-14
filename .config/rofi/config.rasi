@@ -1,4 +1,6 @@
 configuration {
 	modi: "window,drun,ssh";
 	combi-modi: "window,run,ssh";
-@import "~/.cache/wal/colors-rofi-dark";
+}
+
+@import "~/.cache/wal/colors-rofi-dark"
