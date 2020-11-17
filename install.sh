@@ -10,9 +10,11 @@ then
 	sudo apt -y install vim
 	sudo apt -y purge nano
 	
+	mkdir -p .local/share/vim/swap .local/share/vim/undo .local/share/vim/backup .local/share/vim/view .local/share/vim/after
+
 	if [ $HOSTNAME == "dev" || $HOSTNAME == "abel" ]
 	then
-		PACKAGES="python3-pip zsh curl rsync xz-utils git-flow kitty xorg build-essential libsdl1.2-dev libsdl-mixer1.2-dev conky picom git"
+		PACKAGES="xorg-server rofi picom kitty conky python3-pip zsh curl rsync xz-utils git-flow kitty xorg build-essential libsdl1.2-dev libsdl-mixer1.2-dev conky picom git"
 		sudo apt -y install $PACKAGES
 		python3 -m pip install --user pipx
 		python3 -m pipx ensurepath
@@ -22,9 +24,11 @@ fi
 
 if [ $DISTRO == "arch" ]
 then
+	mkdir -p .local/share/vim/swap .local/share/vim/undo .local/share/vim/backup .local/share/vim/view .local/share/vim/after
+
 	if [ $HOSTNAME == "dev" ] || [ $HOSTNAME == "abel" ]
 	then
-		PACKAGES="python-pywal python-pip rsync xz gitflow-avh xorg-server alacritty base-devel sdl sdl_mixer conky picom"
+		PACKAGES="xorg xorg-server xorg-apps xorg-init i3-gaps-next-git i3status rofi picom alacritty conky python-pywal python-pip rsync xz gitflow-avh xorg-server alacritty base-devel sdl sdl_mixer conky picom"
 
 		git clone https://aur/archlinux.org/yay.git
 		cd yay
