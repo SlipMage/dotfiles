@@ -1,0 +1,8 @@
+#!/bin/zsh
+export GITHUB_TOKEN=$(cat ~/github_token)
+export GITHUB_SSH_KEY=$(cat ~/.ssh/id_ed25519.pub)
+export GITHUB_HOSTNAME=$(hostname)
+echo $GITHUB_TOKEN
+echo $GITHUB_SSH_KEY
+echo $GITHUB_HOSTNAME
+curl -H "Authorization: token $GITHUB_TOKEN" --data '{"title":"'"$GITHUB_HOSTNAME"'","key":"'"$GITHUB_SSH_KEY"'"}' https://api.github.com/user/keys
