@@ -2,7 +2,7 @@
 
 DISTRO=$(awk -F= '$1=="ID" { print $2 }' /etc/os-release)
 
-PACKAGES="zsh openssh-server sudo curl vim"
+PACKAGES="zsh openssh-server curl vim rsync"
 
 HOSTNAME=$(hostname -s)
 
@@ -29,7 +29,9 @@ then
 	cd ~
 	yay -Y $PACKAGES
 	yay -Y -R nano
-	chsh -s /bin/zsh
+	git clone --recursive --separate-git-dir=$HOME/.dots.git git@github.com:SlipMage/dotfiles.git /tmp/dots
+	rsync -rvl --exclude ".git" /tmp/dots/ $HOME/
+	rm -r /tmp/dots
 	echo "change .config/zsh/.zshrc to setup zinit; logout then back in"
 fi
 
