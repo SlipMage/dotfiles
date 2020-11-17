@@ -12,8 +12,11 @@ then
 	
 	if [ $HOSTNAME == "dev" || $HOSTNAME == "abel" ]
 	then
-		PACKAGES=zsh curl rsync xz-utils git-flow kitty xorg build-essential libsdl1.2-dev libsdl-mixer1.2-dev conky picom git
+		PACKAGES="python3-pip zsh curl rsync xz-utils git-flow kitty xorg build-essential libsdl1.2-dev libsdl-mixer1.2-dev conky picom git"
 		sudo apt -y install $PACKAGES
+		python3 -m pip install --user pipx
+		python3 -m pipx ensurepath
+		pipx install --user pywal
 	fi
 fi
 
@@ -21,13 +24,15 @@ if [ $DISTRO == "arch" ]
 then
 	if [ $HOSTNAME == "dev" ] || [ $HOSTNAME == "abel" ]
 	then
-		PACKAGES=rsync xz gitflow-avh xorg-server alacritty base-devel sdl sdl_mixer conky picom
+		PACKAGES="python-pywal python-pip rsync xz gitflow-avh xorg-server alacritty base-devel sdl sdl_mixer conky picom"
 
 		git clone https://aur/archlinux.org/yay.git
 		cd yay
 		makepkg -si
 		cd ~
 		yay -S --noconfirm $PACKAGES
+		python3 -m pip install --user pipx
+		python3 -m pipx ensurepath
 		git clone --recursive --separate-git-dir=$HOME/.dots.git git@github.com:SlipMage/dotfiles.git /tmp/dots
 		rsync -rvl --exclude ".git" /tmp/dots/ $HOME/
 		rm -r /tmp/dots
